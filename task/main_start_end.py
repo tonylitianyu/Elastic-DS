@@ -1,6 +1,7 @@
 #python3 -m task.main_start_end
 import numpy as np
 import os, sys
+import argparse
 from os.path import exists
 import pickle
 import matplotlib.pyplot as plt
@@ -14,13 +15,17 @@ from utils.pipeline_func import get_gmm, get_ds
 from utils.plotting import plot_full_func
 from lpv_ds_a.utils_ds.structures import ds_gmms
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--test', type=int, default=0, help='Choose Test Case')
+args = parser.parse_args()
+p = args.test
+
 geo_test_arr = [
     [(0.1167, 0.4660, -np.pi/4), (0.8718, 0.4733, np.pi/4)],
     [(0.1167, 0.2660, -np.pi/4), (0.8718, 0.6733, np.pi/4)],
     [(0.2, 0.85, -np.pi/4), (0.7, 0.35, np.pi/4)]
 ]
-#for p in range(len(plot_array)):
-p = 2
+
 
 task_name = 'startreach2d'
 task_idx  = 'all_2d'

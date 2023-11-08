@@ -10,34 +10,34 @@ def dpmm(*args_):
     ################## command-line arguments #####################
     ###############################################################
     
-    parser = argparse.ArgumentParser(
-                        prog = 'Parallel Implemention of Dirichlet Process Mixture Model',
-                        description = 'parallel implementation',
-                        epilog = '2023, Sunan Sun <sunan@seas.upenn.edu>')
+    # parser = argparse.ArgumentParser(
+    #                     prog = 'Parallel Implemention of Dirichlet Process Mixture Model',
+    #                     description = 'parallel implementation',
+    #                     epilog = '2023, Sunan Sun <sunan@seas.upenn.edu>')
 
 
-    parser.add_argument('--input', type=int, default=4, help='Choose Data Input Option: 4')
-    parser.add_argument('-d', '--data', type=int, default=10, help='Choose Dataset, default=10')
-    parser.add_argument('-t', '--iteration', type=int, default=40, help='Number of Sampler Iterations; default=50')
-    parser.add_argument('-a', '--alpha', type=float, default = 1, help='Concentration Factor; default=1')
-    parser.add_argument('--init', type=int, default = 1, help='number of initial clusters, 0 is one cluster per data; default=1')
-    parser.add_argument('--base', type=int, default = 1, help='clustering option; 0: position; 1: position+directional')
-    args = parser.parse_args()
+    # parser.add_argument('--input', type=int, default=4, help='Choose Data Input Option: 4')
+    # parser.add_argument('-d', '--data', type=int, default=10, help='Choose Dataset, default=10')
+    # parser.add_argument('-t', '--iteration', type=int, default=40, help='Number of Sampler Iterations; default=50')
+    # parser.add_argument('-a', '--alpha', type=float, default = 1, help='Concentration Factor; default=1')
+    # parser.add_argument('--init', type=int, default = 1, help='number of initial clusters, 0 is one cluster per data; default=1')
+    # parser.add_argument('--base', type=int, default = 1, help='clustering option; 0: position; 1: position+directional')
+    # args = parser.parse_args()
 
-    if len(sys.argv) == 1:                              # pass arguments manually
-        input_opt         = 4
-        dataset_no        = 8
-        iteration         = 500
-        alpha             = 1
-        init_opt          = 15
-        base              = 1
-    else:                                               # pass arguments by command line
-        input_opt         = args.input
-        dataset_no        = args.data
-        iteration         = args.iteration
-        alpha             = args.alpha
-        init_opt          = args.init
-        base              = args.base
+    # if len(sys.argv) == 1:                              # pass arguments manually
+    #     input_opt         = 4
+    #     dataset_no        = 8
+    #     iteration         = 500
+    #     alpha             = 1
+    #     init_opt          = 15
+    #     base              = 1
+    # else:                                               # pass arguments by command line
+    input_opt         = 4#args.input
+    dataset_no        = 10#args.data
+    iteration         = 500#args.iteration
+    alpha             = 1#args.alpha
+    init_opt          = 15#args.init
+    base              = 1#args.base
     
     
     ###############################################################

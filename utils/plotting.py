@@ -475,10 +475,10 @@ def plot_full_func(ds_struct, original_ds_struct, tunnel=False):
         ax[i].set_aspect(1)
         ax[i].set_xlim([0.0, 1.0])
         ax[i].set_ylim([0.0, 1.0])
-        ax[i].set_xlabel(r"$\xi_1$")
-        ax[i].set_ylabel(r"$\xi_2$")
-        plt.xticks([]) 
-        plt.yticks([])
+        ax[i].set_xlabel(r"$\xi_1$", fontsize=10)
+        ax[i].set_ylabel(r"$\xi_2$", fontsize=10)
+        ax[i].set_xticks([]) 
+        ax[i].set_yticks([])
 
     vs0 = plot_struct()
     vs0.show_ds = True
@@ -489,7 +489,8 @@ def plot_full_func(ds_struct, original_ds_struct, tunnel=False):
     vs0.show_traj = False
     vs0.tunnel = tunnel
     plot_single(ax[0], original_ds_struct, vs0)
-    ax[0].set_title('The Original Policy')
+    ax[0].set_title('The Original Policy', fontsize=15)
+
 
     vs1 = plot_struct()
     vs1.show_ds = True
@@ -500,9 +501,10 @@ def plot_full_func(ds_struct, original_ds_struct, tunnel=False):
     vs1.show_traj = True
     vs1.tunnel = tunnel
     plot_single(ax[1], ds_struct, vs1)
-    ax[1].set_title('The New Policy')
+    ax[1].set_title('The New Policy', fontsize=15)
 
     plt.show()
+    #plt.savefig('imgs/via.png')
 
 
     

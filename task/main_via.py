@@ -1,6 +1,7 @@
 #python3 -m task.main_start_end
 import numpy as np
 import os, sys
+import argparse
 from os.path import exists
 import pickle
 import matplotlib.pyplot as plt
@@ -15,11 +16,15 @@ from utils.pipeline_func import get_gmm, get_ds, combine_gmms
 from utils.plotting import plot_full_func
 from lpv_ds_a.utils_ds.structures import ds_gmms
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--test', type=int, default=0, help='Choose Test Case')
+args = parser.parse_args()
+p = args.test
+
 geo_test_arr = [
-    (0.4, 0.4, -np.pi/4),
+    (0.5, 0.7, 0),
     (0.7, 0.7, -np.pi/2)
 ]
-p = 1
 
 task_name = 'via2d'
 task_idx  = 'all_2d'
