@@ -267,7 +267,7 @@ def plot_gaussian2D(ax, mus, covs, edge_color="#D79B00", face_color="#FFE6CC", s
         width, height = 2 * n_std * np.sqrt(e_val)
 
         #sample_pts = create_ellipsoid2d(mus[i], np.sqrt(e_val), e_vec)
-        ellip = patches.Ellipse(mus[i], width, height, theta, \
+        ellip = patches.Ellipse(xy=mus[i], width=width, height=height, angle=theta, \
                                 edgecolor=edge_color, facecolor=face_color, lw=2.0, zorder=100, alpha=face_alpha)
         if show_mu:
             ax.scatter(mus[i][0], mus[i][1], c=edge_color, s=8, zorder=101)
