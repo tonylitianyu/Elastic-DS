@@ -23,20 +23,11 @@ python -m task.main_via --test 1
 ### BibTeX
 If you find this code useful for you project, please consider citing it.
 ```
-@article{li2023task,
-
-    title={Task Generalization with Stability Guarantees via Elastic Dynamical System Motion Policies}, 
-
-    author={Tianyu Li and Nadia Figueroa},
-
-    year={2023},
-
-    eprint={2309.01884},
-
-    archivePrefix={arXiv},
-
-    primaryClass={cs.RO}
-
+@inproceedings{li2023task,
+  title={Task generalization with stability guarantees via elastic dynamical system motion policies},
+  author={Li, Tianyu and Figueroa, Nadia},
+  booktitle={7th Annual Conference on Robot Learning},
+  year={2023}
 }
 ```
 
